@@ -1080,3 +1080,62 @@ section {
     padding-right: 20px 15px;
   }
 }
+
+.light-mode {
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+.dark-mode {
+  background-color: #1a1a1a;
+  color: #FFFFFF;
+}
+
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  top: 6px;
+  left: 0px;
+  right: 0px;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 34px;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 21px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #1a1a1a;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.switch:focus-within .slider {
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+
